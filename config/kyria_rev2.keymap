@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include "../zmk-nodefree-config/helper.h"
 
 / {
 	keymap {
@@ -63,8 +64,8 @@
 // |       |  !  |  [  |  &   |  ]   |  #   |  ALT  | ????? |                            | ????? |  ALT  |  ?   |  HOME |   ⬇   |  END |   /   |  RET |
 //                     |  ??? | GUI  | RET  | SPACE | LOWER |                            | RAISE |  BSPC | SPACE|   0   |  ???  |
 			bindings = <
-&trans  &kp GRAVE &kp LBRC &kp KP_ASTERISK &kp RBRC  &kp KP_PLUS                                         &kp F7    &kp F8    &kp Ü     &kp F10   &kp F11   &kp F12
-&trans  &kp Ä     &kp LPAR &kp ß           &kp RPAR  &kp MINUS                                           &kp F7    &kp LEFT  &kp UP    &kp RIGHT &kp Ö     &kp DQT
+&trans  &kp GRAVE &kp LBRC &kp KP_ASTERISK &kp RBRC  &kp KP_PLUS                                         &kp F7    &kp F8    &de_ue    &kp F10   &kp F11   &kp F12
+&trans  &de_ae    &kp LPAR &de_eszett      &kp RPAR  &kp MINUS                                           &kp F7    &kp LEFT  &euro_sign &kp RIGHT &de_oe    &kp DQT
 &trans  &kp EXCL  &kp LBKT &kp AMPS        &kp RBKT  &kp HASH  &trans    &trans     &trans    &trans     &kp K     &kp HOME  &kp DOWN  &kp END   &kp QMARK &kp RET
                            &trans          &kp LGUI  &kp SPACE &trans    &mo 1      &mo 2     &trans     &kp SPACE &kp KP_N0 &trans
 		      >;
